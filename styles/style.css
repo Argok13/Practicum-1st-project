@@ -1,13 +1,11 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
-
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -15,12 +13,32 @@
   width: 100%;
   min-height: 600px;
   max-height: 756px;
-  /*background-color: #2f80ed*/
-  
-  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color:  #f2f2f2;
+  margin-bottom: 100px;
+  border: 1px solid #1f1f1f;
 }
-
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+ .header__logo {
+  height: 32px;
+  width: 228px;
+  position: absolute;
+  top: 30px;
+  left: 64px;
+ }
+ .header_title{
+   width: 780px;
+   left: 64px;
+   position: absolute;
+   top: 200px;
+   display: flex;
+   flex-direction: column;
+   line-height: 96px;
+   font-size: 102px;
+   /*border: 1px  solid red;*/
+   z-index: 3;
+  }
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -29,22 +47,69 @@
   right: 0;
   top: 64px;
   z-index: 1;
-  border:0;
-}
-
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
 }
 .main-illustration{
   height: 608px;
   width: 765px;
-  /*position: absolute;*/
-  buttom:0;
+  position: absolute;
   right: 0;
+  bottom: 0;
   margin: 0;
   z-index: 2;
+  /*border: 1px  solid red;*/
+}
+.header_subtitle{
+  position: absolute;
+  left: 64px;
+  bottom: 30px;
+  width: 388px;
+  font-size: 18px;
+  line-height: 25px;
+}
+/* и элемента с модификатором вида ключ-значение */
+/*.table__cell_theme_dark {
+  width: 200px;
+  color: rgb(18, 6, 247);
+  margin-right: 0;
+  margin-top: 80px;
+}*/
+.content{
+  background-color:  #f2f2f2;
+  border: 1px solid #1f1f1f;
+}
+.description{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+justify-content:space-between;
+}  
+.two-columns{
+width: 80%;
+padding: 0 20px 0 20px;
+display: flex;
+justify-content:space-between;
+min-width: 784px;
+}
+.two-column__brief{
+  color:#2f80ed;
+  width: 275px;
+  font-size: 18px;
+  line-height: 25px;
+  line-height: 1.2;
+  font-weight: normal;
+padding-right: 240px;
+}
+.two-colomns_main-text{
+right: 0;
+
+}
+.two-colomns_paragraph{
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  bottom: 30px;
+  top: 0;
+}
+.two-colomns__span-accept{
+  line-height: 34px;
 }
